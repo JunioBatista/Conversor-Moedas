@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConversorComponent } from './conversor.component';
+import { ModalCotacaoComponent } from './modal-cotacao.component';
 
-describe('ConversorComponent', () => {
-  let component: ConversorComponent;
-  let fixture: ComponentFixture<ConversorComponent>;
+describe('ModalCotacaoComponent', () => {
+  let component: ModalCotacaoComponent;
+  let fixture: ComponentFixture<ModalCotacaoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConversorComponent ]
+      declarations: [ ModalCotacaoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ConversorComponent);
+    fixture = TestBed.createComponent(ModalCotacaoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
