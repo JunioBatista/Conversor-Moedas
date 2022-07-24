@@ -40,7 +40,8 @@ export class ConversorComponent implements OnInit {
   	  this.conversorService
         .converter(this.conversao)
         .subscribe({
-          next: response => this.conversaoResponse = response,
+          next: response => {
+            this.conversaoResponse = response},
           error: error => this.possuiErro = true
         });
   	}

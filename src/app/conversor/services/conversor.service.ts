@@ -14,10 +14,13 @@ export class ConversorService {
   constructor(private http: HttpClient) {}
 
   converter(conversao: Conversao): Observable<any> {
+
   let params = `&base=${conversao.moedaDe}&symbols=${conversao.moedaPara}`;
-  return this.http
+  let result  = this.http
       .get(this.BASE_URL + params);
 
+
+      return result
       //.map(response => response.json() as ConversaoResponse)
       //.catch(error => Observable.throw(error));
   }
@@ -25,6 +28,7 @@ export class ConversorService {
   cotacaoPara(conversaoResponse: ConversaoResponse, 
  conversao: Conversao): number {
   if (conversaoResponse === undefined) {
+
   return 0;
   }
   return conversaoResponse.rates[conversao.moedaPara];
